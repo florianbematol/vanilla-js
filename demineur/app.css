@@ -1,0 +1,108 @@
+.root .column {
+    width: 50px;
+    height: 50px;
+    transition: background-color 200ms;
+}
+
+.root .column.hidden .flag-column {
+    position: absolute;
+    top: -50px;
+    padding: 10px;
+    color: #f23607;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.root .column.had-number .num {
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    margin: 0;
+    pointer-events: none; 
+}
+
+.root .column.explode i {
+    height: 100%;
+    width: 100%;
+    text-align: center;
+    font-size: xx-large;
+    color: #BF4949;
+    margin-top: 7px;
+}
+
+
+
+/* Text color depending on nb neighbours */
+.root .column.had-number .num._1 {
+    color: #1976d2;
+}
+.root .column.had-number .num._2 {
+    color: #388e3c;
+}
+.root .column.had-number .num._3 {
+    color: #d32f2f; 
+}
+.root .column.had-number .num._4 {
+    color: purple;
+}
+.root .column.had-number .num._5 {
+    color: black; 
+}
+/* -------------------------------------- */
+
+/* Background row when not discovered */
+.root .line .column.hidden {
+    background-color: #a2d149;
+}
+.root .line .column.hidden:nth-child(2n) {
+    background-color: #aad751;
+}
+.root .line:nth-child(2n) .column.hidden {
+    background-color: #aad751;
+}
+.root .line:nth-child(2n) .column.hidden:nth-child(2n){
+    background-color: #a2d149;
+}
+/* ----------------------------- */
+
+.root .line .column.hidden.lightness {
+    background-color: #b9ea59 ;
+}
+.root .line .column.hidden.lightness:nth-child(2n) {
+    background-color: #aee050;
+}
+.root .line:nth-child(2n) .column.hidden.lightness {
+    background-color: #aee050;
+}
+.root .line:nth-child(2n) .column.hidden.lightness:nth-child(2n){
+    background-color: #b9ea59;
+}
+
+/* Background row when discovered */
+.root .line .column {
+    background-color: #d7b899;
+}
+.root .line .column:nth-child(2n) {
+    background-color: #e5c29f;
+}
+.root .line:nth-child(2n) .column {
+    background-color: #e5c29f;
+}
+.root .line:nth-child(2n) .column:nth-child(2n){
+    background-color: #d7b899;
+}
+/* ----------------------------- */
+
+/* Background row when hidden mouseover  */
+.root .line .column.hidden:hover {
+    cursor: pointer;
+    background-color:#b5da6f!important;
+}
+/* ----------------------------- */
+
+/* Background row when mouseover and discovered with number */
+.root .line .column.had-number:hover {
+    cursor: pointer;
+    background-color:#e6d1ac!important;
+}
+/* ----------------------------- */
