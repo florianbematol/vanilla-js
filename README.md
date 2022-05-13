@@ -6,3 +6,4 @@ Repository for some really small vanilla js project.
 
 * [Deminer](./demineur/README.md)
 * [Clock](./clock//README.md)
+* [Frame Rate](./frame_rate//README.md)
